@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kamsala Sukumar — Data Analyst | Operations Intelligence</title>
+<meta name="description" content="Kamsala Sukumar — Data Analyst specializing in Python, SQL, Power BI &amp; Tableau. Turning healthcare, transportation and manufacturing data into operational decisions.">
+<meta name="theme-color" content="#05070D">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2305070D'/%3E%3Cpath d='M14 34V14M14 24l10-10M14 24l10 10' stroke='%2300E5C7' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Kamsala Sukumar — Data Analyst">
+<meta property="og:description" content="Operations-trained Data Analyst building dashboards that reflect how businesses actually run.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons (Devicon for recognizable tech logos; all UI icons are inline SVG via js/main.js) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+<!-- ============ NOISE / GRAIN OVERLAY ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-mark">
+    <img src="assets/img/load_Image.png"
+         alt="SK"
+         class="loader-logo">
+</div>
+    <div class="loader-bar-track"><div class="loader-bar" id="loaderBar"></div></div>
+    <div class="loader-label"><span id="loaderPct">0</span>%<span class="loader-sep">/</span><span>INITIALIZING CONSOLE</span></div>
+  </div>
+</div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav-wrap">
+  <nav class="nav glass" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo-mark">SK</span>
+      <span class="nav-logo-status"><span class="dot-live"></span>ONLINE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="icon" data-icon="sun" aria-hidden="true"></i><i class="icon" data-icon="moon" aria-hidden="true"></i>
+      </button>
+      <a href="assets/resume/Kamsala_Sukumar_Resume.pdf" download class="btn btn-mini magnetic">Resume</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#stack">Stack</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="reveal-up eyebrow mono-tag"><span class="dot-live"></span>DATA ANALYST — OPERATIONS INTELLIGENCE</div>
+      <h1 class="hero-title">
+        <span class="reveal-line"><span>Turning live</span></span>
+        <span class="reveal-line"><span>operations into</span></span>
+        <span class="reveal-line"><span class="text-gradient">decisions worth</span></span>
+        <span class="reveal-line"><span>trusting.</span></span>
+      </h1>
+      <p class="hero-sub reveal-up">I'm <strong>Kamsala Sukumar</strong> — a Data Analyst who spent time inside real healthcare operations before turning to dashboards. That means the numbers I build are checked against how the business actually runs, not just how the spreadsheet looks.</p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-primary magnetic"><span>View Projects</span><i class="icon" data-icon="arrow-right" aria-hidden="true"></i></a>
+        <a href="assets/resume/Kamsala_Sukumar_Resume.pdf" download class="btn btn-ghost magnetic"><span>Download Résumé</span><i class="icon" data-icon="download" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-console reveal-up glass" id="heroConsole">
+      <div class="console-head">
+        <span class="console-title mono-tag">SUKUMAR.K</span>
+        <span class="console-dots"><i></i><i></i><i></i></span>
+      </div>
+
+      <div class="console-video-frame">
+        <video class="console-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-video-poster.jpg">
+          <source src="assets/video/hero-video.mp4" type="video/mp4">
+        </video>
+        <span class="console-video-badge mono-tag"><span class="dot-live"></span>99% OPERATIONAL ACCURACY</span>
+      </div>
+
+      <div class="console-row">
+        <span class="console-label">Industries Analyzed</span>
+        <span class="console-value" data-count="3">0</span>
+      </div>
+      <div class="console-tags">
+        <span class="chip">Healthcare</span><span class="chip">Transportation</span><span class="chip">Manufacturing</span>
+      </div>
+
+      <div class="console-row">
+        <span class="console-label">Certifications</span>
+        <span class="console-value" data-count="6">0</span>
+      </div>
+      <div class="console-row">
+        <span class="console-label">CGPA</span>
+        <span class="console-value-static">8.40<span class="dim">/10</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue reveal-up">
+    <span>SCROLL</span>
+    <div class="scroll-cue-line"><div class="scroll-cue-dot"></div></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">01 // ABOUT</span>
+      <h2 class="section-title">From processing live transactions <br class="br-desktop">to modelling what they mean.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal-scale">
+        <div class="about-photo glass">
+          <img src="assets/img/profile.jpg" alt="Portrait of Kamsala Sukumar" loading="lazy" width="600" height="800">
+          <div class="about-photo-tag mono-tag">Bengaluru, Karnataka, IN</div>
+        </div>
+        <div class="about-photo-badge glass">
+          <i class="icon" data-icon="check-circle" aria-hidden="true"></i>
+          <div><strong>99% accuracy</strong><span>sustained across high-volume healthcare ops</span></div>
+        </div>
+      </div>
+
+
+      
+      <div class="about-copy">
+        <p class="reveal-up lead">Most analysts learn data quality from a textbook. I learned it from the queue — reconciling patient, provider and appointment records at <strong>MediBuddy</strong>, where a wrong field meant a missed appointment, not just a broken chart.</p>
+        <p class="reveal-up">That operational grounding now shapes how I analyze data: I don't just clean and visualize it, I ask what decision it's meant to support and whether it would survive contact with the real process behind it. Alongside my B.Tech in Computer Science, I completed a focused Data Analytics program covering Python, SQL, Power BI, Tableau, Machine Learning and Statistics — sharpening the analytical layer on top of that operations instinct.</p>
+        <p class="reveal-up">Today I build interactive dashboards, automate reporting, and run exploratory analysis across domains as different as hospital logistics, city traffic, and factory floors — with one constant: insights a business can actually act on.</p>
+        <div class="about-facts reveal-up">
+          <div class="about-fact"><span class="mono-tag">LOCATION</span><strong>Bengaluru, Karnataka</strong></div>
+          <div class="about-fact"><span class="mono-tag">FOCUS</span><strong>Analytics &amp; BI</strong></div>
+          <div class="about-fact"><span class="mono-tag">EXPERIENCE</span><strong>Healthcare Ops + Data</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+
+  
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">02 // CAPABILITIES</span>
+      <h2 class="section-title">The full pipeline, <span class="text-gradient">start to insight.</span></h2>
+      <p class="section-desc">From messy raw records to a dashboard a stakeholder actually opens every morning.</p>
+    </div>
+    
+    <div class="hero-orb" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/globe-poster.jpg">
+      <source src="assets/video/globe.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-scroll-cue reveal-up">
+    <span>SCROLL</span>
+    <div class="scroll-cue-line"><div class="scroll-cue-dot"></div></div>
+  </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card glass reveal-up">
+        <div class="skill-card-head"><i class="icon" data-icon="code" aria-hidden="true"></i><h3>Python &amp; Libraries</h3></div>
+        <p>OOP, file &amp; exception handling, and the analyst's core stack.</p>
+        <div class="tag-row">
+          <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Scikit-learn</span>
+        </div>
+      </div>
+
+      <div class="skill-card glass reveal-up">
+        <div class="skill-card-head"><i class="icon" data-icon="database" aria-hidden="true"></i><h3>SQL &amp; Databases</h3></div>
+        <p>Query design that scales past SELECT * — built for real reporting loads.</p>
+        <div class="tag-row">
+          <span class="chip">MySQL</span><span class="chip">Joins &amp; Subqueries</span><span class="chip">CTEs</span><span class="chip">Window Functions</span><span class="chip">Stored Procedures</span><span class="chip">Indexes</span>
+        </div>
+      </div>
+
+      <div class="skill-card glass reveal-up">
+        <div class="skill-card-head"><i class="icon" data-icon="bar-chart" aria-hidden="true"></i><h3>Business Intelligence</h3></div>
+        <p>Dashboards built for the person who has thirty seconds before their next meeting.</p>
+        <div class="tag-row">
+          <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Tableau</span><span class="chip">Looker Studio</span>
+        </div>
+      </div>
+
+      <div class="skill-card glass reveal-up">
+        <div class="skill-card-head"><i class="icon" data-icon="filter" aria-hidden="true"></i><h3>Data Analysis</h3></div>
+        <p>The unglamorous 80% — cleaning, validating, and trusting the data first.</p>
+        <div class="tag-row">
+          <span class="chip">EDA</span><span class="chip">Data Cleaning</span><span class="chip">Wrangling</span><span class="chip">Validation</span><span class="chip">Trend &amp; KPI Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-card glass reveal-up">
+        <div class="skill-card-head"><i class="icon" data-icon="grid" aria-hidden="true"></i><h3>Spreadsheet Mastery</h3></div>
+        <p>Where most operational reporting still actually lives.</p>
+        <div class="tag-row">
+          <span class="chip">Advanced Excel</span><span class="chip">Pivot Tables</span><span class="chip">INDEX-MATCH</span><span class="chip">Conditional Formatting</span>
+        </div>
+      </div>
+
+      <div class="skill-card glass reveal-up">
+        <div class="skill-card-head"><i class="icon" data-icon="cloud" aria-hidden="true"></i><h3>Cloud &amp; Big Data</h3></div>
+        <p>Comfortable stepping beyond a single machine when the dataset demands it.</p>
+        <div class="tag-row">
+          <span class="chip">AWS Fundamentals</span><span class="chip">PySpark</span><span class="chip">Git &amp; GitHub</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="method-strip reveal-up">
+      <span class="mono-tag">CORE STACK —</span>
+      <div class="method-marquee">
+        <div class="method-track" id="skillMarqueeTrack">
+          <span class="marquee-item"><i class="devicon-python-plain"></i>Python</span>
+          <span class="marquee-item"><i class="devicon-mysql-plain"></i>MySQL</span>
+          <span class="marquee-item"><i class="devicon-pandas-original"></i>Pandas</span>
+          <span class="marquee-item"><i class="devicon-numpy-original"></i>NumPy</span>
+          <span class="marquee-item"><i class="icon" data-icon="bar-chart" aria-hidden="true"></i>Power BI</span>
+          <span class="marquee-item"><i class="icon" data-icon="pie-chart" aria-hidden="true"></i>Tableau</span>
+          <span class="marquee-item"><i class="icon" data-icon="file-spreadsheet" aria-hidden="true"></i>Excel</span>
+          <span class="marquee-item"><i class="icon" data-icon="zap" aria-hidden="true"></i>PySpark</span>
+          <span class="marquee-item"><i class="devicon-amazonwebservices-plain-wordmark"></i>AWS</span>
+          <span class="marquee-item"><i class="devicon-git-plain"></i>Git</span>
+          <span class="marquee-item"><i class="devicon-github-original"></i>GitHub</span>
+          <span class="marquee-item"><i class="icon" data-icon="activity" aria-hidden="true"></i>Looker Studio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="section" id="stack">
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">03 // TECH STACK</span>
+      <h2 class="section-title">Tools I reach for <span class="text-gradient">by default.</span></h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-item glass reveal-scale"><i class="devicon-python-plain"></i><span>Python</span></div>
+      <div class="stack-item glass reveal-scale"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+      <div class="stack-item glass reveal-scale"><i class="devicon-numpy-original"></i><span>NumPy</span></div>
+      <div class="stack-item glass reveal-scale"><i class="devicon-pandas-original"></i><span>Pandas</span></div>
+      <div class="stack-item glass reveal-scale"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+      <div class="stack-item glass reveal-scale"><i class="devicon-git-plain"></i><span>Git</span></div>
+      <div class="stack-item glass reveal-scale"><i class="devicon-github-original"></i><span>GitHub</span></div>
+      <div class="stack-item glass reveal-scale"><i class="icon" data-icon="bar-chart" aria-hidden="true"></i><span>Power BI</span></div>
+      <div class="stack-item glass reveal-scale"><i class="icon" data-icon="pie-chart" aria-hidden="true"></i><span>Tableau</span></div>
+      <div class="stack-item glass reveal-scale"><i class="icon" data-icon="file-spreadsheet" aria-hidden="true"></i><span>Excel</span></div>
+      <div class="stack-item glass reveal-scale"><i class="icon" data-icon="zap" aria-hidden="true"></i><span>PySpark</span></div>
+      <div class="stack-item glass reveal-scale"><i class="icon" data-icon="activity" aria-hidden="true"></i><span>Looker Studio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">04 // PROJECTS</span>
+      <h2 class="section-title">Three industries. <span class="text-gradient">One habit — find the bottleneck.</span></h2>
+      <p class="section-desc">Each project below is placeholder-linked — swap in your live dashboard / repo URLs any time.</p>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- Project 1 -->
+      <article class="project-card glass reveal-up" data-project="1">
+        <div class="project-visual">
+          <video class="project-video auto-video" muted loop playsinline preload="metadata" poster="assets/img/hro-dashboard-poster.jpg">
+            <source src="assets/video/hro-dashboard.mp4" type="video/mp4">
+          </video>
+          <span class="project-index mono-tag">Hospital Resource Optimization</span>
+        </div>
+        <div class="project-body">
+          <span class="mono-tag project-tag">HEALTHCARE OPERATIONS</span>
+          <h3>Hospital Resource Optimization</h3>
+          <p class="project-hook">Where does a hospital actually lose time — and who's waiting because of it?</p>
+          <ul class="project-points">
+            <li>Ran exploratory analysis across patient flow, staff utilization and resource allocation to surface where operational efficiency was breaking down.</li>
+            <li>Cleaned, integrated and validated EHR, staffing and inventory datasets in Python and SQL before any dashboard work began.</li>
+            <li>Designed an interactive Power BI dashboard tracking KPIs, occupancy and resource utilization for hospital administrators.</li>
+            <li>Applied the CRISP-ML(Q) framework to keep the analysis reproducible and quality-controlled, not one-off.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Excel</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn placeholder-link" data-placeholder="github"><i class="icon" data-icon="github" aria-hidden="true"></i>GitHub Repo</a>
+            <a href="#" class="link-btn placeholder-link" data-placeholder="dashboard"><i class="icon" data-icon="external-link" aria-hidden="true"></i>Live Dashboard</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card glass reveal-up" data-project="2">
+        <div class="project-visual">
+          <video class="project-video auto-video" muted loop playsinline preload="metadata" poster="assets/img/tva-dashboard-poster.jpg">
+            <source src="assets/video/tva-dashboard.mp4" type="video/mp4">
+          </video>
+          <span class="project-index mono-tag">LIVE DASHBOARD WALKTHROUGH</span>
+        </div>
+        <div class="project-body">
+          <span class="mono-tag project-tag">URBAN TRANSPORTATION</span>
+          <h3>Traffic Volume Analysis</h3>
+          <p class="project-hook">Reading a city's pulse through congestion patterns most people just sit in.</p>
+          <ul class="project-points">
+            <li>Analyzed large-scale traffic datasets in Python to identify congestion trends, peak-hour behavior and flow patterns.</li>
+            <li>Performed cleaning, statistical analysis and feature engineering to raise dataset quality before modelling.</li>
+            <li>Built interactive Power BI and Tableau dashboards visualizing density, congestion hotspots and transport KPIs.</li>
+            <li>Turned patterns into recommendations for signal timing and evidence-based transportation planning.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Excel</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn placeholder-link" data-placeholder="github"><i class="icon" data-icon="github" aria-hidden="true"></i>GitHub Repo</a>
+            <a href="#" class="link-btn placeholder-link" data-placeholder="dashboard"><i class="icon" data-icon="external-link" aria-hidden="true"></i>Live Dashboard</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card glass reveal-up" data-project="3">
+        <div class="project-visual">
+          <video class="project-video auto-video" muted loop playsinline preload="metadata" poster="assets/img/cma-dashboard-poster.jpg">
+            <source src="assets/video/cma-dashboard.mp4" type="video/mp4">
+          </video>
+          <span class="project-index mono-tag">LIVE DASHBOARD WALKTHROUGH</span>
+        </div>
+        <div class="project-body">
+          <span class="mono-tag project-tag">MANUFACTURING</span>
+          <h3>Card Manufacturing Analysis</h3>
+          <p class="project-hook">Finding the bottleneck on a production line before it becomes a quarter-end problem.</p>
+          <ul class="project-points">
+            <li>Integrated production, downtime, defect and machine utilization data into one centralized analytical repository.</li>
+            <li>Ran EDA, trend analysis and root cause analysis to isolate bottlenecks and quality issues on the line.</li>
+            <li>Built interactive Power BI dashboards to track production KPIs, defect rates and machine utilization.</li>
+            <li>Delivered recommendations that fed directly into process optimization and productivity improvement.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Excel</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn placeholder-link" data-placeholder="github"><i class="icon" data-icon="github" aria-hidden="true"></i>GitHub Repo</a>
+            <a href="#" class="link-btn placeholder-link" data-placeholder="dashboard"><i class="icon" data-icon="external-link" aria-hidden="true"></i>Live Dashboard</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="container">
+
+        <div class="achievements-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/blackhole-poster.jpg">
+      <source src="assets/video/blackhole.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">05 // EXPERIENCE</span>
+      <h2 class="section-title">Inside the operation, <span class="text-gradient">before the dashboard.</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal-up">
+        <div class="timeline-marker"><span class="dot-live"></span></div>
+        <div class="timeline-card glass">
+          <div class="timeline-card-head">
+            <div>
+              <h3>Operational Associate</h3>
+              <span class="timeline-company">MediBuddy · Bengaluru, Karnataka</span>
+            </div>
+            <span class="mono-tag timeline-date">JAN 2026 — JUL 2026</span>
+          </div>
+          <ul class="project-points">
+            <li>Coordinated end-to-end healthcare operations across hospitals, providers, insurance partners and internal teams to keep appointment scheduling and SLA delivery on track.</li>
+            <li>Verified and maintained patient, provider and appointment records in CRM systems, holding data accuracy to strict quality standards.</li>
+            <li>Prepared MIS and KPI reports in Excel and Google Sheets that fed directly into operational decisions.</li>
+            <li>Ran data validation, root cause analysis and record reconciliation — cutting turnaround time and lifting data quality.</li>
+            <li>Partnered across Provider Operations, Customer Support, Hospital Network and Appointment Operations to streamline processes.</li>
+            <li>Held <strong>99% operational accuracy</strong> across high-volume healthcare transactions while consistently meeting SLA and productivity targets.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section section-alt" id="education">
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">06 // EDUCATION</span>
+      <h2 class="section-title">The analytical foundation.</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card glass reveal-up">
+        <i class="icon" data-icon="graduation-cap" aria-hidden="true"></i>
+        <span class="mono-tag timeline-date">FEB 2025 — FEB 2026</span>
+        <h3>Professional Course in Data Analytics</h3>
+        <span class="timeline-company">360DigiTMG · Bengaluru</span>
+        <p>Python, SQL, Power BI, Tableau, Excel, Machine Learning &amp; Statistics — a focused, applied program built around real datasets rather than theory alone.</p>
+      </div>
+      <div class="edu-card glass reveal-up">
+        <i class="icon" data-icon="graduation-cap" aria-hidden="true"></i>
+        <span class="mono-tag timeline-date">NOV 2021 — APR 2025</span>
+        <h3>B.Tech, Computer Science &amp; Engineering</h3>
+        <span class="timeline-company">Sir C. V. Raman Institute of Technology</span>
+        <p>CGPA <strong>8.40 / 10</strong>. Coursework: Database Management Systems, Data Structures, Programming, Statistics, Operating Systems, Software Engineering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="section" id="certifications">
+
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">07 // CERTIFICATIONS</span>
+      <h2 class="section-title">Verified, <span class="text-gradient">not just claimed.</span></h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card glass reveal-scale"><i class="devicon-python-plain"></i><h4>Python Programming</h4></div>
+      <div class="cert-card glass reveal-scale"><i class="icon" data-icon="database" aria-hidden="true"></i><h4>Advanced SQL</h4></div>
+      <div class="cert-card glass reveal-scale"><i class="icon" data-icon="file-spreadsheet" aria-hidden="true"></i><h4>Advanced Microsoft Excel</h4></div>
+      <div class="cert-card glass reveal-scale"><i class="icon" data-icon="bar-chart" aria-hidden="true"></i><h4>Microsoft Power BI</h4></div>
+      <div class="cert-card glass reveal-scale"><i class="icon" data-icon="pie-chart" aria-hidden="true"></i><h4>Tableau</h4></div>
+      <div class="cert-card glass reveal-scale"><i class="icon" data-icon="graduation-cap" aria-hidden="true"></i><h4>Professional Data Analytics</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section section-alt achievements-section" id="achievements">
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">08 // BY THE NUMBERS</span>
+      <h2 class="section-title">Impact, quantified.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card glass reveal-up"><span class="stat-num" data-count="99" data-suffix="%">0</span><span class="stat-label">Operational accuracy sustained at MediBuddy</span></div>
+      <div class="stat-card glass reveal-up"><span class="stat-num" data-count="3">0</span><span class="stat-label">Industries analyzed end-to-end — health, transport, manufacturing</span></div>
+      <div class="stat-card glass reveal-up"><span class="stat-num" data-count="6">0</span><span class="stat-label">Professional certifications across the analytics stack</span></div>
+      <div class="stat-card glass reveal-up"><span class="stat-num" data-count="8" data-decimal=".40">0</span><span class="stat-label">CGPA out of 10 in B.Tech Computer Science</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESUME ============ -->
+<section class="section" id="resume">
+  <div class="container">
+    <div class="resume-panel glass reveal-scale">
+      <div class="resume-panel-copy">
+        <span class="mono-tag section-eyebrow">09 // RÉSUMÉ</span>
+        <h2 class="section-title">Want the full breakdown?</h2>
+        <p class="section-desc">One page. Every project, tool and result — ready to forward to your team.</p>
+        <a href="assets/resume/Kamsala_Sukumar_Resume.pdf" download class="btn btn-primary magnetic"><span>Download PDF Résumé</span><i class="icon" data-icon="download" aria-hidden="true"></i></a>
+      </div>
+      <div class="resume-panel-visual">
+        <div class="resume-doc">
+          <div class="resume-doc-line" style="width:60%"></div>
+          <div class="resume-doc-line" style="width:90%"></div>
+          <div class="resume-doc-line" style="width:75%"></div>
+          <div class="resume-doc-line resume-doc-accent" style="width:40%"></div>
+          <div class="resume-doc-line" style="width:85%"></div>
+          <div class="resume-doc-line" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="mono-tag section-eyebrow">10 // CONTACT</span>
+      <h2 class="section-title">Let's talk about <span class="text-gradient">your data.</span></h2>
+      <p class="section-desc">Open to Data Analyst roles and analytics collaborations. Usually replies within a day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card glass reveal-up">
+        <i class="icon" data-icon="mail" aria-hidden="true"></i>
+        <span class="mono-tag">EMAIL</span>
+        <a href="mailto:kamsala.sukumar09@gmail.com" class="contact-value">kamsala.sukumar09@gmail.com</a>
+      </div>
+      <div class="contact-card glass reveal-up">
+        <i class="icon" data-icon="phone" aria-hidden="true"></i>
+        <span class="mono-tag">PHONE</span>
+        <a href="tel:+919502971555" class="contact-value">+91 95029 71555</a>
+      </div>
+      <div class="contact-card glass reveal-up">
+        <i class="icon" data-icon="linkedin" aria-hidden="true"></i>
+        <span class="mono-tag">LINKEDIN</span>
+        <a href="#" class="contact-value placeholder-link" data-placeholder="linkedin">Add LinkedIn URL</a>
+      </div>
+      <div class="contact-card glass reveal-up">
+        <i class="icon" data-icon="github" aria-hidden="true"></i>
+        <span class="mono-tag">GITHUB</span>
+        <a href="#" class="contact-value placeholder-link" data-placeholder="github-profile">Add GitHub URL</a>
+      </div>
+    </div>
+
+    <form class="contact-form glass reveal-up" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required placeholder="you@company.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" required placeholder="Tell me about the role or project..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary magnetic"><span>Send Message</span><i class="icon" data-icon="send" aria-hidden="true"></i></button>
+      <p class="form-note">Opens your email client with this message pre-filled — nothing is stored on this site.</p>
+    </form>
+  </div>
+
+      <div class="hero-orb-2" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/globe-poster.jpg">
+      <source src="assets/video/globe.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-scroll-cue reveal-up">
+    <span>SCROLL</span>
+    <div class="scroll-cue-line"><div class="scroll-cue-dot"></div></div>
+  </div>
+
+
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo-mark">KS</span>
+        <p>Data Analyst turning operational noise into decisions worth trusting.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:kamsala.sukumar09@gmail.com">Email</a>
+          <a href="tel:+919502971555">Phone</a>
+          <a href="#" class="placeholder-link" data-placeholder="linkedin">LinkedIn</a>
+          <a href="#" class="placeholder-link" data-placeholder="github-profile">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Kamsala Sukumar. All rights reserved.</span>
+      <button class="back-to-top magnetic" id="backToTop" aria-label="Back to top"><i class="icon" data-icon="arrow-up" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
